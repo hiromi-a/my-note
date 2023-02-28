@@ -24,26 +24,51 @@
 
         <div class="code-block">
           <span class="code-lang">CSS</span>
-          <pre class="code"><code>
-display: grid;
+          <pre class="code"><code>display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-gap: 0 28px;
-          </code></pre>
+grid-gap: 0 28px;</code></pre>
         </div>
+        <ul>
+          <li>
+            <b>列を均等に4分割</b><br>
+            grid-template-columns: repeat(4, 1fr);
+          </li>
+          <li>
+            <b>行を均等に3分割</b><br>
+            grid-template-rows: repeat(3, 1fr);
+          </li>
+          <li>
+            <b>同じ幅4つ</b><br>
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          </li>
+          <li>
+            <b>同じ高さ3つ</b><br>
+            grid-template-rows: 1fr 1fr 1fr;
+          </li>
+        </ul>
 
         <h3 class="contents__ttl">flex</h3>
-        <pre class="code"><code>display: flex;
+        <div class="code-block">
+          <span class="code-lang">CSS</span>
+          <pre class="code"><code>display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
-</code></pre>
+justify-content: center;</code></pre>
+        </div>
+
+        <h3 class="contents__ttl">position</h3>
+        <div class="code-block">
+          <span class="code-lang">CSS</span>
+          <pre class="code"><code>position: absolute;
+top: 50%;
+left: 0;
+right: 0;
+transform: translate(0, -50%);
+margin: 0 auto;</code></pre>
+        </div>
+
       </section>
 
-
-      <pre class="code css"><code>ここにコード</code></pre>
-      <pre class="code html"><code>ここにコード</code></pre>
-      <pre class="code js"><code>ここにコード</code></pre>
-      <pre class="code php"><code>ここにコード</code></pre>
 
     </div>
   </main>
