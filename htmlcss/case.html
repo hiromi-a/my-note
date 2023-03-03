@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My note | こんな時</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__logo"><a href="/">My Note</a></h1>
+
+  </header>
+  <main>
+    <div class="container">
+      <h2>こんな時</h2>
+
+      <section class="contents">
+        <h3 class="contents__ttl">
+          CSSやjsのキャッシュが反映されない
+        </h3>
+        <p>URLの末尾にタイムスタンプを追記</p>
+        <div class="code-block">
+          <span class="code-lang">CSS</span>
+          <pre class="code"><code>&ltlink rel="stylesheet" type="text/css" href="http://sample.com/css/style.css?20230301">
+          </code></pre>
+        </div>
+
+        <h3 class="contents__ttl">
+          jQueryエラー
+        </h3>
+        <p>jQuery 3.xでload()が廃止されている</p>
+        <div class="code-block">
+          <span class="code-lang">JS</span>
+          <pre class="code"><code>// × jQuery 3.x系では動かない
+$(window).load(function (){...});
+
+// ○ jQuery 3.x系でも動く
+$(window).on('load',function(){...});
+          </code></pre>
+        </div>
+        <a href="https://twotone.me/web/5207/" target="_blank" rel="noopener">参考</a>
+
+
+        </div>
+
+      </section>
+
+
+    </div>
+  </main>
+</body>
+
+</html>

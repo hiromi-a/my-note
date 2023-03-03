@@ -5,6 +5,24 @@ ul li {
   margin-bottom: 16px;
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  transition: .3s;
+  &:hover {
+    opacity: .7;
+  }
+ }
+
 .header {
   display: flex;
   flex-direction: column;
@@ -13,7 +31,9 @@ ul li {
 }
 
 .header__logo {
-
+  a {
+    text-decoration: none;
+   }
 }
 
 .container {
