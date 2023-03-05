@@ -12,7 +12,11 @@
 
 <body>
   <header class="header">
-    <h1 class="header__logo"><a href="/">My Note</a></h1>
+    <h1 class="header__logo">
+      <a href="/">
+        <object type="image/svg+xml" data="/img/mynote-logo.svg" width="500" height="124" alt="My Note"></object>
+      </a>
+    </h1>
 
   </header>
   <main>
@@ -78,6 +82,51 @@ right: 0;
 transform: translate(0, -50%);
 margin: 0 auto;</code></pre>
         </div>
+
+        <h3 class="contents__ttl">dlで横並び</h3>
+
+        <dl class="dl__list">
+          <dt class="dl__date">2023.1.25</dt>
+          <dd class="dl__desc">コンテンツ</dd>
+        </dl>
+        
+        <div class="code-block">
+          <span class="code-lang">html</span>
+          <pre class="code"><code>&ltdl class="dl__list">
+  &ltdt class="dl__date">2023.1.25&lt/dt>
+  &ltdd class="dl__desc">コンテンツ&lt/dd>
+&lt/dl></code></pre>
+        </div>
+        <div class="code-block">
+          <span class="code-lang">css</span>
+          <pre class="code"><code>.dl__list {
+  display: flex;
+  flex-wrap: wrap; // ←不要？
+  flex-direction: row;
+  align-items: center;
+}
+.dl__date {
+  width: 110px;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: .03em;
+}
+.dl__desc {
+  width: calc(100% - 110px);
+  font-size: 16px;
+  line-height: 30px;
+}</code></pre>
+        </div>
+
+        <h3 class="contents__ttl">縦書き</h3>
+        <div class="code-block">
+          <span class="code-lang">CSS</span>
+          <pre class="code"><code>縦書き
+writing-mode: vertical-rl;
+横書き
+writing-mode: horizontal-tb;（初期値）</code></pre>
+        </div>
+
 
       </section>
 

@@ -17,9 +17,9 @@ img {
 
 a {
   color: inherit;
-  transition: .3s;
+  transition: .2s;
   &:hover {
-    opacity: .7;
+    opacity: .5;
   }
  }
 
@@ -33,6 +33,11 @@ a {
 .header__logo {
   a {
     text-decoration: none;
+   }
+   object {
+    max-width: 160px;
+    width: 100%;
+    height: auto;
    }
 }
 
@@ -78,4 +83,22 @@ a {
 
 pre code {
   user-select: all !important;
+}
+
+// dlで横並び
+.dl__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dl__date {
+  width: 80px;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: .03em;
+}
+.dl__desc {
+  width: calc(100% - 80px);
+  font-size: 16px;
+  line-height: 30px;
 }
