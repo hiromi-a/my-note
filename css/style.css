@@ -1,4 +1,9 @@
 @charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   padding-left: 20px;
 }
@@ -118,6 +123,63 @@ pre code {
   -webkit-user-select: all !important;
      -moz-user-select: all !important;
           user-select: all !important;
+}
+
+.page-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  right: 16px;
+  bottom: 0;
+  z-index: 1;
+}
+
+.page-top__inner {
+  position: relative;
+  background: #000;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 16px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.page-top__inner::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.page-top__item {
+  -webkit-transform: translate(0, 8px);
+          transform: translate(0, 8px);
 }
 
 .dl__list {
