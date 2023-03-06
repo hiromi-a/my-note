@@ -28,16 +28,37 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 24px 0;
+}
+
+.header__nav {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li + li {
+    margin-left: 16px;
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
 .header__logo {
+  margin: 0;
+  padding: 0;
   a {
     text-decoration: none;
    }
    object {
-    max-width: 160px;
+    max-width: 140px;
     width: 100%;
     height: auto;
+    
    }
 }
 
