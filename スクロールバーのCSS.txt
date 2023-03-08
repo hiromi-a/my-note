@@ -1,0 +1,26 @@
+// スクロールバー
+
+.brand {
+  ::-webkit-scrollbar{
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track{
+    background-color: rgba(#fff, 20%);
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #fff;
+  }
+}
+
+.brand .inner-s {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.brand__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  margin-bottom: 66px;
+}

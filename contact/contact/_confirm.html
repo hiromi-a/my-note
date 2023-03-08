@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+</head>
+<body>
+  
+<header class="header">
+ 
+</header>
+
+<main class="main_contetns">
+<div id="contact">
+  	
+  <div class="contents">
+    <h2>Contact</h2>
+    <div class="page-inner">
+      
+      <ol class="contact-form-step">
+        <li>STEP 01</li>
+        <li class="active">STEP 02</li>
+        <li>STEP 03</li>
+      </ol>
+	  
+	  <form method="post" action="sender.php">
+	  <input type="hidden" name="token" value="%token%">
+      <table class="contact-form">
+        <tbody>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">お名前<span class="color-r">*</span><br><span class="contact-form-en">Name</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">お名前<span class="color-r">*</span><br><span class="contact-form-en">Name</span></th>
+            <td class="contact-form-txt"><input type="text" name="お名前" size="60" value="%お名前%" placeholder="お名前が入ります" required readonly></td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">法人名<span class="contact-form-en">Company</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">法人名<br><span class="contact-form-en">Company</span></th>
+            <td class="contact-form-txt"><input type="text" name="法人名" size="60" value="%法人名%" readonly></td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">住所<br><span class="contact-form-en">Address</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">住所<br><span class="contact-form-en">Address</span></th>
+            <td class="contact-form-txt">〒<input type="text" name="郵便番号1" id="address" class="address-01" size="60" value="%郵便番号1%" readonly>
+              <span class="hyphen">-</span><input type="text" name="郵便番号2" id="address" class="address-02" size="60" value="%郵便番号2%" readonly>
+              <br><input type="text" name="住所" id="address" class="address-03" size="60" value="%住所%" readonly>
+            </td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">メールアドレス<span class="color-r">*</span><br><span class="contact-form-en">Email</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">メールアドレス<span class="color-r">*</span><br><span class="contact-form-en">Email</span></th>
+            <td class="contact-form-txt"><input type="email" name="メールアドレス" size="60" value="%メールアドレス%" data-conv-half-alphanumeric="true" required readonly></td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">電話番号<br><span class="contact-form-en">TEL</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">電話番号<br><span class="contact-form-en">TEL</span></th>
+            <td class="contact-form-txt"><input type="text" name="電話番号" size="60" value="%電話番号%" readonly></td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">お問い合わせ<span class="color-r">*</span><br><span class="contact-form-en">Message</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">お問い合わせ<span class="color-r">*</span><br><span class="contact-form-en">Message</span></th>
+            <td class="contact-form-txt"><textarea name="お問い合わせ" cols="50" rows="5" placeholder="お問い合わせ" required readonly>%お問い合わせ%</textarea></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="common-btn txt-c flex-box">
+        <input type="submit" value="送信" class="btn btn-mg2 order_01">
+	  </div>
+	  </form> 
+        
+    </div>
+  </div>
+
+  	
+</div>
+</main>
+
+<style>
+input:not([type="submit"]),textarea{
+	background:#f7faff !important;
+	border-color:#dddddd !important;
+	outline:none;
+}
+</style>
+
+
+
+
+
+<footer>
+
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+// スムーススクロール & アンカーリンク & 絶対パス
+$(window).on('load', function() {
+  const headerHight = 104;
+  $('a[href*="#"]').click(function () {
+    const speed = 400;
+    const target = $(this.hash === '#' || '' ? 'html' : this.hash)
+    if (!target.length) return;
+    const position = target.offset().top - headerHight;
+    $('html, body').animate({ scrollTop: position }, speed, 'swing');
+    return false;
+  });
+});
+
+$(window).on("load", function () {
+  const headerHeight = 204;
+  const urlHash = location.hash;
+  if (urlHash) {
+    const position = $(urlHash).offset().top - headerHeight + 50;
+    $("html, body").animate({ scrollTop: position }, 0);
+  }
+});
+
+------------
+
+まず$(window).on('load')で読み込むのが結構大事です（$(function() {})にはしない）。コンテンツ量が多かったり読み込み速度が遅いとページ遷移後にアンカーリンクがずれてしまう可能性があるので、ロードが完了してから処理をします。
+
+------------
+
+【jQuery】ヘッダー固定時アンカーリンク位置のずれを調整する方法
+https://atelier-light.com/blog/anchor_positioning/
+
+別ページへのアンカーリンクがヘッダーの高さ分ずれる時の対処法
+https://dezanari.com/jquery-anchor-header-fixed/
+
+
+スムーススクロールを絶対パスでやる方法
+https://dezanari.com/jquery-smooth-scroll-abs-paths/

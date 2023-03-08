@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+</head>
+<body>
+  
+<header class="header">
+
+</header>
+
+<main class="main_contetns">
+<div id="contact">
+  	
+  <div class="contents">
+    <h2>Contact</h2>
+    <div class="page-inner">
+      
+      <ol class="contact-form-step">
+        <li class="active">STEP 01</li>
+        <li>STEP 02</li>
+        <li>STEP 03</li>
+      </ol>
+	  
+	  <form method="post" action="confirm.php">
+	  <input type="hidden" name="token" value="%token%">
+      <table class="contact-form">
+        <tbody>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">お名前<span class="color-r">*</span><br><span class="contact-form-en">Name</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">お名前<span class="color-r">*</span><br><span class="contact-form-en">Name</span></th>
+            <td class="contact-form-txt"><input type="text" name="お名前" size="60" value="" placeholder="お名前が入ります" required></td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">法人名<span class="contact-form-en">Company</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">法人名<br><span class="contact-form-en">Company</span></th>
+            <td class="contact-form-txt"><input type="text" name="法人名" size="60" value=""></td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">住所<br><span class="contact-form-en">Address</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">住所<br><span class="contact-form-en">Address</span></th>
+            <td class="contact-form-txt">〒<input type="text" name="郵便番号1" id="address" class="address-01" size="60" value="" placeholder="">
+              <span class="hyphen">-</span><input type="text" name="郵便番号2" id="address" class="address-02" size="60" value="" placeholder="">
+              <br><input type="text" name="住所" id="address" class="address-03" size="60" value="" placeholder="">
+            </td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">メールアドレス<span class="color-r">*</span><br><span class="contact-form-en">Email</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">メールアドレス<span class="color-r">*</span><br><span class="contact-form-en">Email</span></th>
+            <td class="contact-form-txt"><input type="email" name="メールアドレス" size="60" value="" placeholder="info@shaka-jp.com" data-conv-half-alphanumeric="true" required></td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">メールアドレス確認<span class="color-r">*</span><br><span class="contact-form-en">Re-enter Email</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">メールアドレス確認<span class="color-r">*</span><br><span class="contact-form-en">Re-enter Email</span></th>
+            <td class="contact-form-txt"><input type="email" name="メールアドレス確認" size="60" value="" placeholder="info@shaka-jp.com" data-conv-half-alphanumeric="true" required></td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">電話番号<br><span class="contact-form-en">TEL</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">電話番号<br><span class="contact-form-en">TEL</span></th>
+            <td class="contact-form-txt"><input type="text" name="電話番号" size="60" value="" placeholder="03-3518-8201"></td>
+          </tr>
+          <tr>
+            <td class="contact-form-txt mobile-disp padding-tableform">お問い合わせ<span class="color-r">*</span><br><span class="contact-form-en">Message</span></td>
+          </tr>
+          <tr>
+            <th class="contact-form-name">お問い合わせ<span class="color-r">*</span><br><span class="contact-form-en">Message</span></th>
+            <td class="contact-form-txt"><textarea name="お問い合わせ" cols="50" rows="5" placeholder="お問い合わせ" required></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="common-btn txt-c flex-box">
+        <input type="submit" name="submitConfirm" value="確認" class="btn btn-mg2 order_01">
+	  </div>
+	  <div class="mailError">
+			入力されたメールアドレスと<br>確認用のメールアドレスが一致しません
+	  </div>
+	  </form> 
+        
+    </div>
+  </div>
+
+  	
+</div>
+</main>
+
+<style>
+.mailError{
+	text-align:center;
+	font-size:12px;
+	color:#aa0000;
+	margin-top:15px;
+	display:none;
+}
+.reject{
+	animation:rejectAnim 0.6s ease-out 0s 1;
+}
+@keyframes rejectAnim{
+	0%{transform:translatex(-6px);}
+	20%{transform:translatex(5px);}
+	40%{transform:translatex(-4px);}
+	60%{transform:translatex(3px);}
+	80%{transform:translatex(-2px);}
+	100%{transform:translatex(0);}
+}
+</style>
+<script>
+window.addEventListener("DOMContentLoaded",function(){
+	document.querySelector("form").addEventListener("submit",function(e){
+		let m1 = document.getElementsByName("メールアドレス")[0].value;
+		let m2 = document.getElementsByName("メールアドレス確認")[0].value;
+		console.log(m1);
+		console.log(m2);
+		if(m1 !== m2){
+			jQuery(".mailError").slideDown();
+			jQuery("form input[type='submit']").addClass("reject");
+			setTimeout(function(){
+				jQuery(".mailError").slideUp();
+				jQuery("form input[type='submit']").removeClass("reject");
+			},3000);
+			e.stopPropagation();
+			e.preventDefault();
+		}
+	});
+});
+</script>
+
+
+
+
+<footer>
+
+</footer>
+
+
+
+</body>
+</html>
