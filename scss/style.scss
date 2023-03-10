@@ -128,6 +128,35 @@ pre code {
   user-select: all !important;
 }
 
+// dlで横並び
+.dl__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dl__date {
+  width: 80px;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: .03em;
+}
+.dl__desc {
+  width: calc(100% - 80px);
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.copy {
+  margin: 20px 0;
+}
 
 //pagetop
 .page-top {
@@ -168,24 +197,4 @@ pre code {
 
 .page-top__item {
   transform: translate(0, 8px);
-}
-
-
-
-// dlで横並び
-.dl__list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.dl__date {
-  width: 80px;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: .03em;
-}
-.dl__desc {
-  width: calc(100% - 80px);
-  font-size: 16px;
-  line-height: 30px;
 }

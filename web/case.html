@@ -16,7 +16,7 @@
   <header class="header">
     <h1 class="header__logo">
       <a href="/">
-        <object type="image/svg+xml" data="/img/mynote-logo.svg" width="500" height="124" alt="My Note"></object>
+        <object type="image/svg+xml" data="../img/mynote-logo.svg" width="500" height="124" alt="My Note"></object>
       </a>
     </h1>
     <nav class="header__nav">
@@ -68,14 +68,42 @@ $(window).on('load',function(){...});
           <b>※子要素で表示・非表示を上書きできる</b>
         </p>
 
-
+        <h3 class="contents__ttl">
+          お問い合わせのメールが届かないときの確認事項
+        </h3>
+        <h4>確認メールのみ届かない</h4>
+        <ul>
+          <li>mailtoの設定ミス</li>
+          <li>使用可能なアドレスか</li>
+          <li>転送先設定確認・迷惑メールフォルダ確認してもらう</li>
+        </ul>
+        <h4>自動返信メールのみ届かない</h4>
+        <ul>
+          <li>メールアドレスのtype属性が "text" になってしまっている</li>
+        </ul>
+        <h4>確認メール・自動返信メール両方とも届かない</h4>
+        <ul>
+          <li>index.htmlがUPされている</li>
+        </ul>
         </div>
-
       </section>
-
-
     </div>
   </main>
+  <footer class="footer">
+    <div class="page-top js-pagetop">
+      <a href="#" class="js-anchor">
+        <p class="page-top__inner">
+          <span class="page-top__item">
+            TOP
+          </span>
+        </p>
+      </a>
+    </div>
+    <small class="copy">© My Note</small>
+  </footer>
+
+  <script src="../js/jquery-3.6.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
